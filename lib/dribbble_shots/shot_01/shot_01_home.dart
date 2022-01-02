@@ -169,29 +169,26 @@ class _Shot01HomeState extends State<Shot01Home> {
     );
   }
 
-  Padding chart() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: AspectRatio(
-        aspectRatio: 2.1,
-        child: BarChart(
-          BarChartData(
-            borderData: FlBorderData(
-              show: false,
-            ),
-            gridData: FlGridData(
-              drawVerticalLine: false,
-              drawHorizontalLine: false,
-            ),
-            backgroundColor: Colors.transparent,
-            titlesData: FlTitlesData(show: false),
-            axisTitleData: FlAxisTitleData(
-              show: true,
-              leftTitle: AxisTitle(margin: 10, reservedSize: 0100),
-            ),
-            barGroups: Shot01().data,
-            alignment: BarChartAlignment.spaceBetween,
+  AspectRatio chart() {
+    return AspectRatio(
+      aspectRatio: 2.1,
+      child: BarChart(
+        BarChartData(
+          borderData: FlBorderData(
+            show: false,
           ),
+          gridData: FlGridData(
+            drawVerticalLine: false,
+            drawHorizontalLine: false,
+          ),
+          backgroundColor: Colors.transparent,
+          titlesData: FlTitlesData(show: false),
+          axisTitleData: FlAxisTitleData(
+            show: true,
+            leftTitle: AxisTitle(margin: 10, reservedSize: 0100),
+          ),
+          barGroups: Shot01().data,
+          alignment: BarChartAlignment.spaceAround,
         ),
       ),
     );
@@ -364,90 +361,104 @@ class _Shot01HomeState extends State<Shot01Home> {
 
   Row weekDays() {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      Container(
-        padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
-        alignment: Alignment.center,
-        child: Text(
-          "M",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 8),
+          alignment: Alignment.center,
+          child: Text(
+            "M",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "T",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          child: Text(
+            "T",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "W",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          child: Text(
+            "W",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "T",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          child: Text(
+            "T",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "F",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          child: Text(
+            "F",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "S",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          child: Text(
+            "S",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "S",
-          style: TextStyle(
-            fontSize: 11,
-            color: Colors.grey.shade800,
-            fontWeight: FontWeight.bold,
+      Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          child: Text(
+            "S",
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          width: 12,
         ),
-        width: 12,
       ),
     ]);
   }
@@ -863,7 +874,7 @@ class _Shot01SecondScreenState extends State<Shot01SecondScreen>
               child: Text(
                 "Edit sleep schedule in  health",
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 13,
                 ),
               ),
             ),
@@ -887,6 +898,14 @@ class _Shot01SecondScreenState extends State<Shot01SecondScreen>
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
+        boxShadow: [
+          BoxShadow(
+            color: Shot01().primaryColor.withOpacity(0.7),
+            blurRadius: 20,
+            spreadRadius: -15,
+            offset: Offset(0, 10),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
