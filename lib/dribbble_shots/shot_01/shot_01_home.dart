@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:dribbble_shots_2022/constants/constants.dart';
-import 'package:dribbble_shots_2022/icon_fonts/icon_pack_bold_icons.dart';
+import 'package:dribbble_shots_2022/constants/shot_01_constants.dart';
 import 'package:dribbble_shots_2022/icon_fonts/icon_pack_outline_icons.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'dribbble_shots/shot_01/shot_01_home.dart';
+import 'dribbble_shots/shot_02/shot_02_home.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: Shot01Home(),
+      home: Shot02Home(),
     );
   }
 }

@@ -1,8 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-/// All constants here
-///
 /// Shot_01 constants
 class Shot01 {
   static Color _primaryColor = Colors.deepPurple.shade300;
